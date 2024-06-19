@@ -9,7 +9,7 @@ lint:
 	rye run flake8 src/*
 
 runprod:
-	rye run python -m gunicorn fffinder.asgi:application -k uvicorn.workers.UvicornWorker --bind 127.0.0.1:${PORT}
+	PORT=${PORT} ./bin/run
 
 build:
 	./bin/build
