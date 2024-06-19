@@ -1,3 +1,2 @@
 #! /bin/bash
-source "$HOME/.rye/env"
-rye run python -m gunicorn fffinder.asgi:application -k uvicorn.workers.UvicornWorker --bind ${IP_ADDR}:${PORT}
+python -m gunicorn fffinder.asgi:application -k uvicorn.workers.UvicornWorker --bind ${IP_ADDR}:${PORT}
