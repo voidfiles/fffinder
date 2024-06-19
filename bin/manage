@@ -1,0 +1,5 @@
+#! /bin/bash
+SCRIPT_PATH=$(dirname $0)
+ROOT_PATH=$(dirname ${SCRIPT_PATH})
+
+(cd $ROOT_PATH/src/fffinderbase/ && rye run python ${ROOT_PATH}/src/fffinderbase/manage.py "$@")
