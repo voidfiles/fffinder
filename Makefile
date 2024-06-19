@@ -12,4 +12,8 @@ runprod:
 	python -m gunicorn fffinder.asgi:application -k uvicorn.workers.UvicornWorker
 
 build:
-	./bin/build
+	pip install -r requirements.lock
+	python src/fffinderbase/manage.py collectstatic --no-input
+
+test:
+	python src/fffinderbase/manage.py test

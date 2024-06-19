@@ -39,7 +39,7 @@ class Post:
                 content=self.html,
             )
         except IntegrityError:
-            raise
+            pass
 
 
 class mr(Web):

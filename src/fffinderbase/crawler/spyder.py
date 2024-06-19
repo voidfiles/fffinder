@@ -25,7 +25,7 @@ class OutboundLink:
                 outbound_url=self.link,
             )
         except IntegrityError:
-            raise
+            pass
 
 
 class Web(scrapy.Spider):
